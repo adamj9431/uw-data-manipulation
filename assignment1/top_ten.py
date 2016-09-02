@@ -3,7 +3,7 @@
 import sys, json
 
 def main():
-    tweets_file = open("/Users/adam/Projects/uw-data-manipulation/assignment1/large_output.txt")
+    tweets_file = open(sys.argv[1])
     tweets = []
     for line in tweets_file:
         try:

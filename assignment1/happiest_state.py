@@ -64,7 +64,7 @@ states = {
 
 
 def main():
-    tweets_file = open("/Users/adam/Projects/uw-data-manipulation/assignment1/large_output.txt")
+    tweets_file = open(sys.argv[2])
     tweets = []
     for line in tweets_file:
         try:
@@ -73,7 +73,7 @@ def main():
         except ValueError as e:
             continue
     tweets_file.close()
-    sentiment_file = open("/Users/adam/Projects/uw-data-manipulation/assignment1/AFINN-111.txt")
+    sentiment_file = open(sys.argv[1])
     sentiments = {}
     for line in sentiment_file:
         term, score = line.split('\t')
