@@ -112,7 +112,7 @@ def main():
         stateSentiments[stateAbbrev]['totalSentiment'] += sentiment
         stateSentiments[stateAbbrev]['count'] += 1
     
-    for stateAbbrev in states:
+    for stateAbbrev in stateSentiments:
         count = stateSentiments[stateAbbrev]['count']
         total = stateSentiments[stateAbbrev]['totalSentiment']
         stateSentiments[stateAbbrev]['averageSentiment'] = float(total)/float(count)

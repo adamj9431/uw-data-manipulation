@@ -24,9 +24,13 @@ def main():
 
     hashtagList = allHashtags.items()
     hashtagList.sort(key=lambda k: k[1], reverse=True)
+    hCount = 0
     for hashtag in hashtagList:
         try:
             print str(hashtag[0]) + " " + str(hashtag[1])
+            hCount += 1
+            if (hCount == 10):
+                break
         except UnicodeEncodeError:
             continue
             
